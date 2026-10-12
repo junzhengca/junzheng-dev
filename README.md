@@ -1,61 +1,32 @@
-# Jun Zheng - Portfolio Website
+# Jun Zheng personal site
 
-A modern, componentized Next.js portfolio website built with TypeScript and Tailwind CSS.
+A Next.js personal site for Jun Zheng, a software engineer in Toronto.
 
-## Features
+## Sections
 
-- **Componentized Architecture**: All UI elements are broken down into reusable components
-- **Dark Mode**: System preference detection with manual toggle
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **TypeScript**: Full type safety throughout the codebase
-- **Maintainable Code**: Clean separation of concerns with data, components, and pages
+- **Outside work**: security profiles, software picks, and other interests
+- **About**: background, experience, and education
 
-## Project Structure
+## Run locally
 
-```
-├── app/
-│   ├── layout.tsx          # Root layout with font configuration
-│   ├── page.tsx            # Main page component
-│   └── globals.css         # Global styles and Tailwind imports
-├── components/
-│   ├── sections/           # Section components (About, Experience, Blog)
-│   ├── Divider.tsx        # Reusable divider component
-│   ├── Footer.tsx          # Footer component
-│   ├── Header.tsx          # Header with profile info
-│   ├── Navigation.tsx      # Tab navigation
-│   └── ThemeToggle.tsx     # Dark mode toggle button
-├── data/                    # Data files
-│   ├── profile.ts          # Profile information
-│   ├── experience.ts       # Work experience data
-│   └── blog.ts             # Blog posts data
-└── ...
-```
-
-## Getting Started
-
-1. Install dependencies:
 ```bash
 npm install
-```
-
-2. Run the development server:
-```bash
 npm run dev
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000).
 
-## Build for Production
+## Content and images
 
-```bash
-npm run build
-npm start
-```
+- Update profile details in `data/profile.ts` and `data/experience.ts`.
+- Update security badges and software picks in `data/outside-work.ts`.
+- The character art is `public/jun-mascot.webp`, with its four-frame walk cycle in `public/jun-mascot-walk.webp`. `components/DraggableMascot.tsx` handles the idle bob, drag-only walk animation, dragging, and keyboard movement.
+- Shared line icons live in `components/Icon.tsx`.
+- The hero uses a local WebP cloud photo by [Israel Palacio on Unsplash](https://unsplash.com/id/foto/pemandangan-awan-dari-jendela-pesawat-1BlNRATdLFs). It is credited in the site footer.
 
-## Technologies
+## Stack
 
-- **Next.js 14**: React framework with App Router
-- **TypeScript**: Type-safe development
-- **Tailwind CSS**: Utility-first CSS framework
-- **JetBrains Mono**: Monospace font for code-like aesthetic
-
+- Next.js 16 with the App Router
+- React 19 and TypeScript
+- Tailwind CSS and site-specific CSS
+- CSS transitions and a gentle mascot animation; reduced-motion settings are respected

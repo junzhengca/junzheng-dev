@@ -3,7 +3,7 @@ export interface BlogPost {
   date: string;
   readTime: string;
   description: string;
-  url: string;
+  url?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -19,7 +19,6 @@ export const blogPosts: BlogPost[] = [
     date: "2024-10-04",
     readTime: "8m",
     description: "Exploring the challenges of building secure, enterprise-grade AI collaboration tools at Google.",
-    url: "#"
   },
   {
     title: "A Programmer's Guide to Cooking",

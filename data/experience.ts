@@ -1,5 +1,8 @@
+import type { IconName } from '@/components/Icon';
+
 export interface ExperienceItem {
   company: string;
+  icon: IconName;
   role: string;
   period: string;
   description: string;
@@ -10,6 +13,7 @@ export interface ExperienceItem {
 export const experience: ExperienceItem[] = [
   {
     company: "Google",
+    icon: "sparkles",
     role: "Software Engineer",
     period: "2021-09 -> Present",
     description: "Building the future of AI collaboration.",
@@ -18,6 +22,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     company: "Royal Bank of Canada",
+    icon: "briefcase",
     role: "Software Developer Intern",
     period: "2019-05 -> 2019-08",
     description: "Technology and Operations division.",
