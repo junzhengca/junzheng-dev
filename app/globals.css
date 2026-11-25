@@ -804,103 +804,6 @@ button {
   color: var(--accent);
 }
 
-.site-mascot {
-  position: fixed;
-  z-index: 40;
-  right: clamp(0.5rem, 3vw, 2rem);
-  bottom: max(0.5rem, env(safe-area-inset-bottom));
-  width: 7.4rem;
-  line-height: 0;
-  cursor: grab;
-  outline: none;
-  touch-action: none;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-.site-mascot--positioned {
-  right: auto;
-  bottom: auto;
-}
-
-.site-mascot:focus-visible {
-  border-radius: 1rem;
-  outline: 3px solid var(--accent);
-  outline-offset: 3px;
-}
-
-.site-mascot img {
-  display: block;
-  width: 100%;
-  height: auto;
-  pointer-events: none;
-  animation: mascot-idle 2.8s ease-in-out infinite;
-}
-
-.site-mascot__walk {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -16.7%;
-  width: 133.4%;
-  display: none;
-  background-image: url('/jun-mascot-walk.webp?v=5');
-  background-repeat: no-repeat;
-  background-size: 400% 100%;
-  pointer-events: none;
-}
-
-.site-mascot--walking .site-mascot__idle {
-  visibility: hidden;
-  animation: none;
-}
-
-.site-mascot--walking .site-mascot__walk {
-  display: block;
-  animation: mascot-walk 560ms linear infinite;
-}
-
-.site-mascot--dragging {
-  cursor: grabbing;
-}
-
-.site-mascot--dragging img {
-  animation-play-state: paused;
-}
-
-@keyframes mascot-idle {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-0.9deg);
-  }
-
-  50% {
-    transform: translateY(-8px) rotate(0.9deg);
-  }
-}
-
-@keyframes mascot-walk {
-  0%,
-  24.99% {
-    background-position: 0 0;
-  }
-
-  25%,
-  49.99% {
-    background-position: 33.333% 0;
-  }
-
-  50%,
-  74.99% {
-    background-position: 66.667% 0;
-  }
-
-  75%,
-  100% {
-    background-position: 100% 0;
-  }
-}
-
 @media (max-width: 900px) {
   .site-header__inner {
     grid-template-columns: auto minmax(0, 1fr) auto;
@@ -1071,13 +974,6 @@ button {
     grid-template-columns: minmax(0, 1fr);
     gap: 0.5rem;
   }
-
-  .site-mascot {
-    right: 0.45rem;
-    bottom: max(0.35rem, env(safe-area-inset-bottom));
-    width: 3.8rem;
-  }
-
 }
 
 @media (max-width: 370px) {
@@ -1102,10 +998,6 @@ button {
   .wordmark {
     font-size: 0.84rem;
   }
-
-  .site-mascot {
-    width: 2.75rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1120,13 +1012,4 @@ button {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-
-  .site-mascot img {
-    animation: none;
-  }
-
-  .site-mascot__walk {
-    animation: none !important;
-  }
-
 }

@@ -6,7 +6,6 @@ import { experience } from '@/data/experience';
 import { outsideWork } from '@/data/outside-work';
 import { profile } from '@/data/profile';
 import { Icon, type IconName } from '@/components/Icon';
-import DraggableMascot from '@/components/DraggableMascot';
 
 const navigation = [
   { id: 'outside', label: 'Outside work', icon: 'compass' },
@@ -330,7 +329,6 @@ export default function PortfolioSite() {
           <p>© {new Date().getFullYear()} Jun Zheng</p>
         </div>
       </footer>
-      <DraggableMascot />
     </div>
   );
 }

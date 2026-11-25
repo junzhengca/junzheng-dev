@@ -16,14 +16,13 @@ The user pointed to Stoatify and Cap, then asked for stock-photo backgrounds and
 - Use one local Unsplash cloud photo as the intro background. A cool, opaque wash keeps text readable in both themes. The photo sets the mood; it does not represent Jun. Credit the photographer in the footer.
 - Use rounded panels for real groups of content: the intro, profile badges, and the software list. Give only the profile panels a light, tinted lift. Keep text lists on the page surface.
 - Show the real TryHackMe and Hack The Box badges, the tools Jun recommends, and facts from the profile README. Do not add fake product screenshots, scores, testimonials, or other invented claims.
-- Add the original pixel-art chibi male mascot requested by Jun as a small site companion. He holds a steaming Starbucks hot coffee. He idles with a gentle float and plays his walk cycle only while Jun drags him. He stays where Jun puts him and moves only when dragged or moved with arrow keys. Turn looping motion off when reduced motion is requested. Do not copy a named game character or use that game's franchise marks.
 - Use a consistent set of small line icons to give the real links, interests, sections, and timeline more visual shape. Each icon should clarify the item beside it; do not use icons as random filler or add a wall of icon-only links.
 
 ## Motion
 
 Dial: ENERGY 3 / RHYTHM 2 / MOTION 2.
 
-Remove scroll choreography and large 3D rotations. Use short hover, focus, and pressed states to make controls feel responsive. The mascot floats while idle and walks only during a drag; pointer movement alone never moves it. Keep drag and keyboard movement available in every motion setting.
+Remove scroll choreography and large 3D rotations. Use short hover, focus, and pressed states to make controls feel responsive.
 
 ## Type and copy
 
