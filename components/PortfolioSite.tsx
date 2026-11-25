@@ -8,6 +8,7 @@ import { profile } from '@/data/profile';
 import { Icon, type IconName } from '@/components/Icon';
 
 const navigation = [
+  { id: 'mctown', label: 'MC Town', icon: 'map' },
   { id: 'outside', label: 'Outside work', icon: 'compass' },
   { id: 'about', label: 'About', icon: 'user' },
 ] as const;
@@ -162,6 +163,50 @@ export default function PortfolioSite() {
             </aside>
           </div>
         </section>
+
+        <section
+          className="content-section mctown-section"
+          id="mctown"
+          aria-labelledby="mctown-title"
+        >
+          <div className="mctown-head">
+            <div>
+              <SectionLabel icon="map">Side project</SectionLabel>
+              <h2 id="mctown-title">MC Town</h2>
+              <p className="mctown-copy">
+                A small Minecraft harbor city I run for human players and 30
+                autonomous AI residents. Watch the live 3D map below, or join
+                from Java or Bedrock at <code>mctown.junzheng.dev</code>.
+              </p>
+            </div>
+            <div className="mctown-actions">
+              <div className="mctown-address" aria-label="Minecraft server address">
+                <span>Java 25565 · Bedrock 19132</span>
+                <code>mctown.junzheng.dev</code>
+              </div>
+              <a
+                className="primary-link"
+                href="https://mctown.junzheng.dev/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open MC Town
+                <Icon name="arrow-up-right" size={16} />
+              </a>
+            </div>
+          </div>
+
+          <div className="mctown-frame">
+            <iframe
+              src="https://mctown.junzheng.dev/"
+              title="MC Town live 3D Minecraft harbor city map"
+              loading="lazy"
+              allow="fullscreen; clipboard-write"
+              allowFullScreen
+            />
+          </div>
+        </section>
+
         <section
           className="content-section outside-section"
           id="outside"

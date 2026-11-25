@@ -464,6 +464,82 @@ button {
   margin: 0 0 0.15rem auto;
 }
 
+.mctown-section {
+  padding-block: clamp(3rem, 5.5vw, 4.75rem);
+  border-top: 0;
+}
+
+.mctown-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) auto;
+  align-items: end;
+  gap: 1.5rem 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mctown-head h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 3.6vw, 3.1rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+}
+
+.mctown-copy {
+  max-width: 38rem;
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.mctown-copy code,
+.mctown-address code {
+  padding: 0.12rem 0.42rem;
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+  background: var(--paper-raised);
+  color: var(--ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+.mctown-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.85rem;
+}
+
+.mctown-address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.mctown-frame {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 1.15rem;
+  background: var(--paper-inset);
+  box-shadow: var(--shadow-soft);
+}
+
+.mctown-frame iframe {
+  display: block;
+  width: 100%;
+  height: clamp(24rem, 62vh, 38rem);
+  border: 0;
+  background: #14111b;
+}
+
 .outside-section {
   margin-block: 0.75rem 1.5rem;
   padding: clamp(1.4rem, 4vw, 3rem);
@@ -824,6 +900,20 @@ button {
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .mctown-head {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 1.15rem;
+  }
+
+  .mctown-actions {
+    justify-content: flex-start;
+  }
+
+  .mctown-address {
+    align-items: flex-start;
+  }
+
   .software-list {
     padding: 0.2rem 0;
   }
@@ -883,12 +973,17 @@ button {
 
   .primary-nav {
     justify-content: flex-end;
-    gap: clamp(0.35rem, 1.5vw, 0.7rem);
+    gap: 0.75rem;
   }
 
   .primary-nav a {
-    min-height: 2.65rem;
-    font-size: 0.72rem;
+    min-height: 2.75rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .primary-nav a svg {
+    display: none;
   }
 
   .theme-toggle {
@@ -945,6 +1040,18 @@ button {
     margin-bottom: 1.8rem;
   }
 
+  .mctown-section {
+    padding-block: 2.25rem;
+  }
+
+  .mctown-frame {
+    border-radius: 0.9rem;
+  }
+
+  .mctown-frame iframe {
+    height: clamp(19rem, 54dvh, 26rem);
+  }
+
   .outside-section {
     padding: 1rem;
     border-radius: 1rem;
@@ -987,11 +1094,11 @@ button {
   }
 
   .primary-nav {
-    gap: 0.3rem;
+    gap: 0.45rem;
   }
 
   .primary-nav a {
-    font-size: 0.66rem;
+    font-size: 0.68rem;
     white-space: nowrap;
   }
 

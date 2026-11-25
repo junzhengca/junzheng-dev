@@ -16,6 +16,7 @@ export type IconName =
   | 'laptop'
   | 'link'
   | 'location'
+  | 'map'
   | 'moon'
   | 'search'
   | 'shield'
@@ -99,6 +100,12 @@ const shapes: Record<IconName, ReactNode> = {
     <>
       <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" />
       <circle cx="12" cy="10" r="2.2" />
+    </>
+  ),
+  map: (
+    <>
+      <path d="M3.5 6.5 9 4.5l6 2 5.5-2v13l-5.5 2-6-2-5.5 2v-13Z" />
+      <path d="M9 4.5v13M15 6.5v13" />
     </>
   ),
   moon: <path d="M20.5 15.2A8.8 8.8 0 0 1 8.8 3.5 9 9 0 1 0 20.5 15.2Z" />,
